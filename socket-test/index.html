@@ -59,8 +59,11 @@ socket.on('chat message', function(msg) {
 socket.on('gold',()=>{
     console.log("Command received.")
     const goldVideo = document.getElementById('goldvideo')
+    const video = document.getElementById('video')
     goldVideo.classList.remove('hidden-video')
     goldVideo.classList.add('shown-video')
+    video.play()
+    
 
     const replaceClass = () => {
       goldVideo.classList.remove('shown-video')
@@ -77,5 +80,6 @@ socket.on('gold',()=>{
 
 
     </script>
+  </body>
   </body>
 </html>
